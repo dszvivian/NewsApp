@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.newsapp.ui.bbcFragment.HomeFragment"
+        android:label="@string/bbc"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_foxxnewsFragment"
+            app:destination="@id/foxxnewsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.newsapp.ui.aljazeeraFragment.GalleryFragment"
+        android:label="@string/aljazeera"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.newsapp.ui.cnnFragment.SlideshowFragment"
+        android:label="@string/cnn"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/foxxnewsFragment"
+        android:name="com.example.newsapp.ui.foxxnewsFragment"
+        android:label="FoxxNews"
+        tools:layout="@layout/fragment_foxxnews" />
+    <fragment
+        android:id="@+id/skynewsFragment"
+        android:name="com.example.newsapp.ui.skynewsFragment"
+        android:label="SkyNews"
+        tools:layout="@layout/fragment_skynews" />
+</navigation>
